@@ -159,8 +159,17 @@ _tasks = [
     },
 ]
 
+# WARN : ONLY FIRACODE PATCH!!
 for font in fonts:
-    print (font)
+    task = {
+      "input": font,
+      "ligatures": [],
+    }
+    if font.count("Bold") > 0:
+        task["ligatures"].append("fonts/fira/distr/ttf/FiraCode-Bold.otf")
+    else:
+        task["ligatures"].append("fonts/fira/distr/ttf/FiraCode-Regular.otf")
+    tasks.append(task)
 
 for task in tasks:
     input_pattern = task['input']
