@@ -2,9 +2,3 @@
 	path = fonts/fira
 	url = https://github.com/tonsky/FiraCode.git
 	shallow = true
-[submodule "fonts/hack"]
-	path = fonts/hack
-	url = https://github.com/source-foundry/Hack
-[submodule "fonts/jetbrainsmono"]
-	path = fonts/jetbrainsmono
-	url = https://github.com/JetBrains/JetBrainsMono

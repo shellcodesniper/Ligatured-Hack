@@ -46,34 +46,6 @@ tasks = []
 
 _tasks = [
     {
-        'input': 'fonts/hack/build/ttf/Hack-Regular.ttf',
-        'ligatures': [
-            'fonts/fira/distr/ttf/FiraCode-Regular.otf',
-            'fonts/jetbrainsmono/fonts/ttf/JetBrainsMono-Regular.ttf'
-        ]
-    },
-    {
-        'input': 'fonts/hack/build/ttf/Hack-Bold.ttf',
-        'ligatures': [
-            'fonts/fira/distr/ttf/FiraCode-Bold.otf',
-            'fonts/jetbrainsmono/fonts/ttf/JetBrainsMono-Bold.ttf'
-        ]
-    },
-    {
-        'input': 'fonts/hack/build/ttf/Hack-BoldItalic.ttf',
-        'ligatures': [
-            'fonts/fira/distr/ttf/FiraCode-Bold.otf',
-            'fonts/jetbrainsmono/fonts/ttf/JetBrainsMono-BoldItalic.ttf'
-        ]
-    },
-    {
-        'input': 'fonts/hack/build/ttf/Hack-Italic.ttf',
-        'ligatures': [
-            'fonts/fira/distr/ttf/FiraCode-Regular.otf',
-            'fonts/jetbrainsmono/fonts/ttf/JetBrainsMono-Italic.ttf'
-        ]
-    },
-    {
         'input': 'fonts/nerd-fonts/Hack Regular Nerd Font Complete.ttf',
         'ligatures': [
             'fonts/fira/distr/ttf/FiraCode-Regular.otf',
