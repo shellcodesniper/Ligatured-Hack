@@ -41,7 +41,10 @@ for fira_ttf in fira_ttf_list:
 # Don't put fonts licensed under UFL here, and don't put fonts licensed under
 # SIL OFL here either unless they haven't specified a Reserved Font Name.
 
-tasks = [
+fonts = glob('./fonts/nerd-fonts/*.ttf')
+tasks = []
+
+_tasks = [
     {
         'input': 'fonts/hack/build/ttf/Hack-Regular.ttf',
         'ligatures': [
@@ -184,6 +187,9 @@ tasks = [
     },
 ]
 
+for font in fonts:
+    print (font)
+
 for task in tasks:
     input_pattern = task['input']
     input_files = glob(input_pattern)
@@ -208,15 +214,16 @@ for task in tasks:
                 # grab all upper case letters of the font family
                 ligatured_font_family = ''.join(list(filter(lambda x: x.isupper(), list(liga_font_family))))
 
-                for copy_character_glyphs in [True, False]:
-                    copied_character_glyphs_suffix = ' CCG' if copy_character_glyphs else ''
-                    ligaturize_font(
-                        input_font_file=input_file,
-                        ligature_font_file=liga_file,
-                        output_dir='fonts/output/',
-                        output_name=None,
-                        suffix="%s %s%s" % (ligatured_font_family, LIGATURIZED_FONT_NAME_SUFFIX, copied_character_glyphs_suffix),
-                        copy_character_glyphs=copy_character_glyphs,
-                        scale_character_glyphs_threshold=SCALE_CHARACTER_GLYPHS_THRESHOLD,
-                        scale_ligature_threshold=SCALE_LIGATURE_THRESHOLD
-                    )
+                #for copy_character_glyphs in [True, False]:
+                copy_character_glyphs = True # Force Enable to Copy Glyphs
+                copied_character_glyphs_suffix = ' CCG' if copy_character_glyphs else ''
+                ligaturize_font(
+                    input_font_file=input_file,
+                    ligature_font_file=liga_file,
+                    output_dir='fonts/output/',
+                    output_name=None,
+                    suffix="%s %s%s" % (ligatured_font_family, LIGATURIZED_FONT_NAME_SUFFIX, copied_character_glyphs_suffix),
+                    copy_character_glyphs=copy_character_glyphs,
+                    scale_character_glyphs_threshold=SCALE_CHARACTER_GLYPHS_THRESHOLD,
+                    scale_ligature_threshold=SCALE_LIGATURE_THRESHOLD
+                )
