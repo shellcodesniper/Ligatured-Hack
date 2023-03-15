@@ -2,6 +2,16 @@
 [![Build Status](https://travis-ci.com/gaplo917/Ligatured-Hack.svg?branch=master)](https://travis-ci.com/gaplo917/Ligatured-Hack)
 [![GitHub release](https://img.shields.io/github/v/release/gaplo917/Ligatured-Hack.svg)](https://gitHub.com/gaplo917/Ligatured-Hack/releases/)
 
+
+## CLONE & INSTALL
+```bash
+git clone https://github.com/shellcodesniper/Ligatured-Hack
+cd Ligature-Hack
+git submodule --depth 1 --init --recursive
+./build.sh
+
+```
+
 <p align="center">
   <img align="center" height="161" src="images/logo.png"/>
 </p>
