@@ -161,6 +161,8 @@ _tasks = [
 
 # WARN : ONLY FIRACODE PATCH!!
 for font in fonts:
+    if (font.count('Complete') == 0):
+        continue
     task = {
       "input": font,
       "ligatures": [],
