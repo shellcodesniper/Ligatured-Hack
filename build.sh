@@ -11,7 +11,7 @@ rm HACK.zip
 
 LOCATION_IOSEVKA=$(curl -s https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest | grep Iosevka.zip | grep browser | awk '{ print $2 }' | sed 's/,$//' | sed 's/"//g');
 rm -rf nerd-fonts;
-curl -L -o IO.zip $LOCATION_HACK;
+curl -L -o IO.zip $LOCATION_IOSEVKA;
 unzip -o IO.zip -d $(pwd)/fonts/nerd-fonts/
 rm HACK.zip
 
