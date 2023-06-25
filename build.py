@@ -41,7 +41,11 @@ for fira_ttf in fira_ttf_list:
 # Don't put fonts licensed under UFL here, and don't put fonts licensed under
 # SIL OFL here either unless they haven't specified a Reserved Font Name.
 
-fonts = glob('./fonts/nerd-fonts/*.ttf')
+
+plex_fonts = glob('./fonts/plex/IBM-Plex-Sans-KR/fonts/complete/ttf/hinted/*.ttf') + glob('./fonts/plex/IBM-Plex-Mono/fonts/complete/ttf/*.ttf')
+nerd_fonts = glob('./fonts/nerd-fonts/*.ttf') 
+
+fonts = plex_fonts + nerd_fonts
 tasks = []
 
 _tasks = [

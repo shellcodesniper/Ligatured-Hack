@@ -2,3 +2,6 @@
 	path = fonts/fira
 	url = https://github.com/tonsky/FiraCode.git
 	shallow = true
+[submodule "fonts/plex"]
+	path = fonts/plex
+	url = https://github.com/IBM/plex
