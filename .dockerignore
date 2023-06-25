@@ -7,3 +7,4 @@ images/*
 !fonts/jetbrainsmono/fonts/ttf/*
 !fonts/fira/extras/*
 !fonts/nerd-fonts/*
+!fonts/sources/*

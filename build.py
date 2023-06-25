@@ -41,11 +41,7 @@ for fira_ttf in fira_ttf_list:
 # Don't put fonts licensed under UFL here, and don't put fonts licensed under
 # SIL OFL here either unless they haven't specified a Reserved Font Name.
 
-
-plex_fonts = glob('./fonts/plex/IBM-Plex-Sans-KR/fonts/complete/ttf/hinted/*.ttf') + glob('./fonts/plex/IBM-Plex-Mono/fonts/complete/ttf/*.ttf')
-nerd_fonts = glob('./fonts/nerd-fonts/*Complete*.ttf') 
-
-fonts = plex_fonts + nerd_fonts
+fonts = [*glob('./fonts/sources/**/*.ttf'), *glob('./fonts/sources/*.ttf')]
 tasks = []
 
 _tasks = [
@@ -163,19 +159,22 @@ _tasks = [
     },
 ]
 
+print (glob("fonts/sources/*"))
+print ("FONT TOTAL: ", len(fonts))
 # WARN : ONLY FIRACODE PATCH!!
 for font in fonts:
+  print("FONT", font)
     # if (font.count('Complete') == 0):
     #     continue
-    task = {
-      "input": font,
-      "ligatures": [],
-    }
-    if font.count("Bold") > 0:
-        task["ligatures"].append("fonts/fira/distr/ttf/FiraCode-Bold.otf")
-    else:
-        task["ligatures"].append("fonts/fira/distr/ttf/FiraCode-Regular.otf")
-    tasks.append(task)
+  task = {
+    "input": font,
+    "ligatures": [],
+  }
+  if font.count("Bold") > 0:
+    task["ligatures"].append("fonts/fira/distr/ttf/FiraCode-Bold.otf")
+  else:
+    task["ligatures"].append("fonts/fira/distr/ttf/FiraCode-Regular.otf")
+  tasks.append(task)
 
 for task in tasks:
     input_pattern = task['input']
