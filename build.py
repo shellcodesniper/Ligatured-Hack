@@ -43,7 +43,7 @@ for fira_ttf in fira_ttf_list:
 
 
 plex_fonts = glob('./fonts/plex/IBM-Plex-Sans-KR/fonts/complete/ttf/hinted/*.ttf') + glob('./fonts/plex/IBM-Plex-Mono/fonts/complete/ttf/*.ttf')
-nerd_fonts = glob('./fonts/nerd-fonts/*.ttf') 
+nerd_fonts = glob('./fonts/nerd-fonts/*Complete*.ttf') 
 
 fonts = plex_fonts + nerd_fonts
 tasks = []
@@ -165,8 +165,8 @@ _tasks = [
 
 # WARN : ONLY FIRACODE PATCH!!
 for font in fonts:
-    if (font.count('Complete') == 0):
-        continue
+    # if (font.count('Complete') == 0):
+    #     continue
     task = {
       "input": font,
       "ligatures": [],
